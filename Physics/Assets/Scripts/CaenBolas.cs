@@ -6,38 +6,37 @@ using UnityEngine;
 
 public class CaenBolas : MonoBehaviour
 {
+    [SerializeField] Transform target;
     private MyVector position;
-    private MyVector gargantuaPosition;
-    [SerializeField] private MyVector acceleration;
+    private MyVector displacement;
     [SerializeField] private MyVector velocity;
-
-    [Header("world")]
-    [SerializeField] private Camera camera;
-    [SerializeField] private Transform gargantua;
-
-
-    void Start()
+    [SerializeField] private MyVector acceleration;
+    MyVector[] accelerations =
     {
-        position = new MyVector(transform.position.x, transform.position.y);
+        new MyVector(0,-9.8f),
+        new MyVector(9.8f,0f),
+        new MyVector(0,9.8f),
+        new MyVector(-9.8f,0f),
+    };
+    private void Start()
+    {
+        position = transform.position;
     }
-
-    void FixedUpdate()
+    public void Move()
+    {
+        velocity += acceleration * Time.fixedDeltaTime;
+        position += velocity * Time.fixedDeltaTime;
+        transform.position = position;
+    }
+    private void FixedUpdate()
     {
         Move();
-        position = new MyVector(transform.position.x, transform.position.y);
-        gargantuaPosition = new MyVector(gargantua.position.x, gargantua.position.y);
-        acceleration = gargantuaPosition - position;
     }
-    void Update()
+    private void Update()
     {
-        velocity = velocity + acceleration * Time.fixedDeltaTime;
-        velocity.Draw(position, Color.blue);
-        position.Draw(Color.green);
-        acceleration.Draw(position, Color.red);
-    }
-    void Move()
-    {
-        position = position + velocity * Time.fixedDeltaTime;
-        transform.position = new Vector3(position.x, position.y);
+        position.Draw(Color.red);
+        displacement.Draw2(position, Color.green);
+        velocity.Draw2(position, Color.blue);
+        acceleration = target.position - transform.position;
     }
 }
