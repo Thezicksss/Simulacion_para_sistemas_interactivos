@@ -264,14 +264,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f7fa71484b5ba46bf1cb93ea29498a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration:
-    x: 0
-    y: 0
+  target: {fileID: 965271757}
   velocity:
     x: 0
     y: 0
-  camera: {fileID: 519420031}
-  gargantua: {fileID: 965271757}
+  acceleration:
+    x: 0
+    y: 0
 --- !u!135 &71510359
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -491,14 +490,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f7fa71484b5ba46bf1cb93ea29498a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration:
-    x: 0
-    y: 0
+  target: {fileID: 965271757}
   velocity:
     x: 0
     y: 0
-  camera: {fileID: 519420031}
-  gargantua: {fileID: 965271757}
+  acceleration:
+    x: 0
+    y: 0
 --- !u!135 &134946338
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -899,14 +897,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f7fa71484b5ba46bf1cb93ea29498a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration:
-    x: 0
-    y: 0
+  target: {fileID: 965271757}
   velocity:
     x: 0
     y: 0
-  camera: {fileID: 519420031}
-  gargantua: {fileID: 965271757}
+  acceleration:
+    x: 0
+    y: 0
 --- !u!135 &1265383902
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1220,14 +1217,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f7fa71484b5ba46bf1cb93ea29498a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration:
-    x: 0
-    y: 0
+  target: {fileID: 965271757}
   velocity:
     x: 0
     y: 0
-  camera: {fileID: 519420031}
-  gargantua: {fileID: 965271757}
+  acceleration:
+    x: 0
+    y: 0
 --- !u!135 &1941198623
 SphereCollider:
   m_ObjectHideFlags: 0

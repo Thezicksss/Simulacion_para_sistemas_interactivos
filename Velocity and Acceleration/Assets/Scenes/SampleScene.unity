@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 1240810083}
   - component: {fileID: 1240810082}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Aceleracion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
